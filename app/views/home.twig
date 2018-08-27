@@ -1,0 +1,14 @@
+{% extends 'layouts/app.twig' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <h1>Welcome to our website</h1>
+    <p>It's a pleasure to have you here! Have a look at our fancy new website.</p>
+    <p>We are especially proud of our awesome newsfeed from Twitter. Check it out below.</p>
+    <h2> Latest from our Twitter </h2>
+    <p><strong>BONUS!</strong></p>
+    <p>You like composing music? Click on each tweet to make a sound! Create next awesome radio beat while reading, yay! <br/>(For this feature turning your audio device is required.)</p> 
+    <p style="text-align:center"><small>Tweets are updating automatically, so you stay on top of the news without the need to refresh the page.</small></p>
+    {% include 'widgets/twitter.twig' %}
+{% endblock %}

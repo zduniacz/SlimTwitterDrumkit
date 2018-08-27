@@ -1,0 +1,73 @@
+body {
+    margin:0px 15%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+.container {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas:
+        "sidebar-1  content   sidebar-2"
+        "footer     footer    footer"
+}
+.footer {
+    grid-area: footer;
+}
+.left {
+    grid-area: sidebar-1;
+}
+.content {
+    grid-area: content;
+}
+.right {
+    grid-area: sidebar-2;
+}
+.tweet {
+    display:grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    
+    background: #F2F2F2;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #fff inset,
+      -1px -1px 2px #fff inset;
+    border-radius: 3px/6px;
+    -webkit-border-radius: 0% 0% 100% 100% / 0% 0% 8px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0,.30) 0 2px 3px;
+    margin: 15px auto;
+}
+.tweet:hover{
+    background: #dae4ed;
+}
+.tweet > img {
+    margin: auto;
+}
+.tweet-meta {
+    font-style: italic;
+    color: #333;
+    font-size: 80%;
+}
+
+.tweet.playing {
+    transform:scale(1.1);
+    border-color:#ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+.tweet > p.updating {
+    margin-left: -100px;
+    text-align: center;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-areas:
+        "content    content     content"
+        "sidebar-1  sidebar-1   sidebar-2"
+        "footer     footer      footer"
+    }
+}

@@ -1,0 +1,13 @@
+<div class="tweets">
+    {% for tweet in tweets %}
+        <div class="tweet">
+            <img src="{{ tweet.user.profile_image_url }}"/>
+            <div>
+                <p><strong>{{ tweet.user.name }}</strong> <span class="tweet-meta">on {{ tweet.created_at }}</span></p>
+                <p>{{ tweet.text | raw}}</p>
+                <p class="tweet-meta">Buzz: <strong>{{ tweet.favorite_count }}</strong> likes, <strong>{{ tweet.retweet_count }}</strong> retweets</span>
+            </div>
+            <audio data-order="{{ tweet.order }}"  src="assets/wav/{{ tweet.order }}.wav"></audio>
+        </div>
+    {% endfor %}
+</div>
